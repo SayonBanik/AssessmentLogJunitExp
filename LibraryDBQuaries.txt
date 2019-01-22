@@ -1,0 +1,28 @@
+Book Table
+
+ CREATE TABLE Book(BookId NUMBER PRIMARY KEY,BookTitle VARCHAR2(20),BookQuantity NUMBER,BookEdition VARCHAR2(15),BookCost NUMBER);
+ 
+ INSERT INTO Book VALUES(1,'Ramayan',25,'4th-Edition',200);
+ INSERT INTO Book VALUES(2,'Ramayan',30,'5th-Edition',230);
+ INSERT INTO Book VALUES(3,'Mahabharat',15,'3rd-Edition',450);
+ INSERT INTO Book VALUES(4,'Mahabharat',20,'9th-Edition',114);
+
+ Member Table
+ 
+ CREATE TABLE Member(MemberId VARCHAR2(10) PRIMARY KEY,MemberName VARCHAR2(20),MembershipType VARCHAR2(9),DurationToKeepBooks NUMBER(4),RegistrationDate_DATE VARCHAR2(20),Password VARCHAR2(10));
+ 
+ INSERT INTO Member VALUES('1','Sayon','Premium',5,'15-Aug-2018','sb@capg');
+ INSERT INTO Member VALUES('2','Sajal','Titanium',10,'19-Aug-2018','sbain@capg');
+ 
+ 
+ Transaction Table
+ 
+
+ CREATE TABLE Transaction_Library(TransactionId NUMBER PRIMARY KEY,IssuedBooksQuantity Number(2),IssueDate VARCHAR2(20),ReturnDate VARCHAR2(20),Return_Status VARCHAR2(15),T_MemberId VARCHAR2(10), T_BookId Number);
+
+ INSERT INTO Transaction_Library VALUES(1,5,'20-Aug-2018','24-Aug-2018','Returned','1',1);
+ INSERT INTO Transaction_Library VALUES(2,3,'25-Aug-2018','03-Sep-2018','Not Returned','1',3);
+
+ 
+ 
+ 
